@@ -28,3 +28,6 @@ class Article {
 
 let articles = document.querySelectorAll('.article');
 articles.forEach((article) => { return new Article(article) });
+
+var tl = new TimelineMax({repeat:6, repeatDelay:1, yoyo:true});
+tl.staggerTo(".expandButton", 0.2, {className:"+=superShadow", top:"-=10px", ease:Power1.easeIn}, "0.3", "start")
